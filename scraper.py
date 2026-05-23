@@ -2,15 +2,15 @@ import os
 import datetime
 import clickhouse_connect
 
-CLICKHOUSE_HOST = os.environ['CLICKHOUSE_HOST']
-CLICKHOUSE_USER = os.environ['CLICKHOUSE_USER']
-CLICKHOUSE_PASSWORD = os.environ['CLICKHOUSE_PASSWORD']
+host = 'n10e93bfd3.us-east-1.aws.clickhouse.cloud'
+user = os.environ['CLICKHOUSE_USER']
+password = os.environ['CLICKHOUSE_PASSWORD']
 
 client = clickhouse_connect.get_client(
-    host=CLICKHOUSE_HOST.replace('https://', '').replace(':8443', ''),
+    host=host,
     port=8443,
-    username=CLICKHOUSE_USER,
-    password=CLICKHOUSE_PASSWORD,
+    username=user,
+    password=password,
     secure=True
 )
 
@@ -32,3 +32,5 @@ for company in companies:
     print(f"Inserted activity signal for {company}")
 
 print("Done. All signals loaded into ClickHouse.")
+
+
