@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: watchtower-backend
+Version: 0.1.0
+Summary: AI competitive intelligence backend
+Requires-Python: >=3.10
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: clickhouse-connect

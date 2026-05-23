@@ -1,0 +1,182 @@
+[
+  {
+    "company": "Notion",
+    "signal_type": "pricing",
+    "source_url": "https://www.notion.so/pricing",
+    "scraped_at": "2026-05-23T16:58:01.117374",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Notion",
+    "signal_type": "reviews",
+    "source_url": "https://www.g2.com/products/notion/reviews",
+    "scraped_at": "2026-05-23T16:58:01.200571",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Notion",
+    "signal_type": "activity",
+    "source_url": "https://www.notion.so/careers",
+    "scraped_at": "2026-05-23T16:58:01.263232",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Notion",
+    "signal_type": "case_studies",
+    "source_url": "https://www.notion.so/customers",
+    "scraped_at": "2026-05-23T16:58:01.327715",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "HubSpot",
+    "signal_type": "pricing",
+    "source_url": "https://www.hubspot.com/pricing",
+    "scraped_at": "2026-05-23T16:58:01.380235",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "HubSpot",
+    "signal_type": "reviews",
+    "source_url": "https://www.g2.com/products/hubspot/reviews",
+    "scraped_at": "2026-05-23T16:58:01.522323",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "HubSpot",
+    "signal_type": "activity",
+    "source_url": "https://www.hubspot.com/careers",
+    "scraped_at": "2026-05-23T16:58:01.585886",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "HubSpot",
+    "signal_type": "case_studies",
+    "source_url": "https://www.hubspot.com/case-studies",
+    "scraped_at": "2026-05-23T16:58:01.647684",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Airtable",
+    "signal_type": "pricing",
+    "source_url": "https://www.airtable.com/pricing",
+    "scraped_at": "2026-05-23T16:58:01.708704",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Airtable",
+    "signal_type": "reviews",
+    "source_url": "https://www.g2.com/products/airtable/reviews",
+    "scraped_at": "2026-05-23T16:58:01.779005",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Airtable",
+    "signal_type": "activity",
+    "source_url": "https://www.airtable.com/careers",
+    "scraped_at": "2026-05-23T16:58:01.841156",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Airtable",
+    "signal_type": "case_studies",
+    "source_url": "https://www.airtable.com/customers",
+    "scraped_at": "2026-05-23T16:58:01.917727",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Asana",
+    "signal_type": "pricing",
+    "source_url": "https://asana.com/pricing",
+    "scraped_at": "2026-05-23T16:58:01.984568",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Asana",
+    "signal_type": "reviews",
+    "source_url": "https://www.g2.com/products/asana/reviews",
+    "scraped_at": "2026-05-23T16:58:02.051257",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Asana",
+    "signal_type": "activity",
+    "source_url": "https://asana.com/jobs",
+    "scraped_at": "2026-05-23T16:58:02.103240",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Asana",
+    "signal_type": "case_studies",
+    "source_url": "https://asana.com/customers",
+    "scraped_at": "2026-05-23T16:58:02.170933",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Monday",
+    "signal_type": "pricing",
+    "source_url": "https://monday.com/pricing",
+    "scraped_at": "2026-05-23T16:58:02.222377",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Monday",
+    "signal_type": "reviews",
+    "source_url": "https://www.g2.com/products/monday-com/reviews",
+    "scraped_at": "2026-05-23T16:58:02.286271",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Monday",
+    "signal_type": "activity",
+    "source_url": "https://monday.com/careers",
+    "scraped_at": "2026-05-23T16:58:02.336373",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  },
+  {
+    "company": "Monday",
+    "signal_type": "case_studies",
+    "source_url": "https://monday.com/customers",
+    "scraped_at": "2026-05-23T16:58:02.399136",
+    "status_code": 404,
+    "error": "JSON parse failed: Extra data: line 1 column 5 (char 4)",
+    "raw_response": "404 page not found"
+  }
+]
