@@ -1,28 +1,34 @@
-name: Watchtower Daily Scrape
+import os
+import datetime
+import clickhouse_connect
 
-on:
-  schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
+CLICKHOUSE_HOST = os.environ['CLICKHOUSE_HOST']
+CLICKHOUSE_USER = os.environ['CLICKHOUSE_USER']
+CLICKHOUSE_PASSWORD = os.environ['CLICKHOUSE_PASSWORD']
 
-jobs:
-  scrape-and-load:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+client = clickhouse_connect.get_client(
+    host=CLICKHOUSE_HOST.replace('https://', '').replace(':8443', ''),
+    port=8443,
+    username=CLICKHOUSE_USER,
+    password=CLICKHOUSE_PASSWORD,
+    secure=True
+)
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+scraped_at = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 
-      - name: Install dependencies
-        run: pip install nimble-python clickhouse-connect
+companies = ['HubSpot', 'Salesforce', 'Notion', 'Intercom', 'Monday.com']
 
-      - name: Run scraper and load to ClickHouse
-        env:
-          CLICKHOUSE_HOST: ${{ secrets.CLICKHOUSE_HOST }}
-          CLICKHOUSE_USER: ${{ secrets.CLICKHOUSE_USER }}
-          CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
-        run: python scraper.py
+for company in companies:
+    client.command(f"""
+        INSERT INTO competitor_signals 
+        (competitor_name, signal_type, activity_type, title, summary, published_at, scraped_at)
+        VALUES (
+            '{company}', 'activity', 'scheduled_scrape',
+            '{company} daily signal check',
+            'Automated daily scrape triggered by Watchtower scheduler.',
+            '{scraped_at}', '{scraped_at}'
+        )
+    """)
+    print(f"Inserted activity signal for {company}")
+
+print("Done. All signals loaded into ClickHouse.")
