@@ -1,0 +1,42 @@
+[
+  {
+    "competitor_name": "HubSpot",
+    "customer_name": "Unknown",
+    "industry": "Unknown",
+    "company_size": "Unknown",
+    "use_case": "Unknown",
+    "scraped_at": "2026-05-23 17:26:48"
+  },
+  {
+    "competitor_name": "Salesforce",
+    "customer_name": "Unknown",
+    "industry": "Unknown",
+    "company_size": "Unknown",
+    "use_case": "Unknown",
+    "scraped_at": "2026-05-23 17:31:33"
+  },
+  {
+    "competitor_name": "Notion",
+    "customer_name": "Unknown",
+    "industry": "Unknown",
+    "company_size": "Unknown",
+    "use_case": "Unknown",
+    "scraped_at": "2026-05-23 17:31:34"
+  },
+  {
+    "competitor_name": "Intercom",
+    "customer_name": "Unknown",
+    "industry": "Unknown",
+    "company_size": "Unknown",
+    "use_case": "Unknown",
+    "scraped_at": "2026-05-23 17:34:36"
+  },
+  {
+    "competitor_name": "Monday.com",
+    "customer_name": "Unknown",
+    "industry": "Unknown",
+    "company_size": "Unknown",
+    "use_case": "Unknown",
+    "scraped_at": "2026-05-23 17:37:53"
+  }
+]

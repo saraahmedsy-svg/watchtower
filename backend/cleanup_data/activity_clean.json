@@ -1,0 +1,42 @@
+[
+  {
+    "competitor_name": "HubSpot",
+    "activity_type": "job_posting",
+    "title": "HubSpot activity signal",
+    "summary": "Detected hiring, product, or growth activity signal.",
+    "published_at": "2026-05-23 17:21:56",
+    "scraped_at": "2026-05-23 17:21:56"
+  },
+  {
+    "competitor_name": "Salesforce",
+    "activity_type": "job_posting",
+    "title": "Salesforce activity signal",
+    "summary": "Detected hiring, product, or growth activity signal.",
+    "published_at": "2026-05-23 17:22:05",
+    "scraped_at": "2026-05-23 17:22:05"
+  },
+  {
+    "competitor_name": "Notion",
+    "activity_type": "job_posting",
+    "title": "Notion activity signal",
+    "summary": "Detected hiring, product, or growth activity signal.",
+    "published_at": "2026-05-23 17:22:30",
+    "scraped_at": "2026-05-23 17:22:30"
+  },
+  {
+    "competitor_name": "Intercom",
+    "activity_type": "job_posting",
+    "title": "Intercom activity signal",
+    "summary": "Detected hiring, product, or growth activity signal.",
+    "published_at": "2026-05-23 17:26:17",
+    "scraped_at": "2026-05-23 17:26:17"
+  },
+  {
+    "competitor_name": "Monday.com",
+    "activity_type": "job_posting",
+    "title": "Monday.com activity signal",
+    "summary": "Detected hiring, product, or growth activity signal.",
+    "published_at": "2026-05-23 17:26:38",
+    "scraped_at": "2026-05-23 17:26:38"
+  }
+]
