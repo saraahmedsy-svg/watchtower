@@ -8,7 +8,6 @@ on:
 jobs:
   scrape-and-load:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -19,7 +18,16 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install nimble-python clickhouse-connect
+        run: pip install requests clickhouse-connect
+
+      - name: Run scraper and load to ClickHouse
+        env:
+          CLICKHOUSE_HOST: ${{ secrets.CLICKHOUSE_HOST }}
+          CLICKHOUSE_USER: ${{ secrets.CLICKHOUSE_USER }}
+          CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
+          NIMBLE_API_KEY: ${{ secrets.NIMBLE_API_KEY }}
+        run: python scraper.py
+
 
       - name: Run scraper and load to ClickHouse
         env:
