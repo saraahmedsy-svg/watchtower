@@ -56,7 +56,10 @@ def scrape_url(url):
     try:
         response = requests.post(
             'https://api.webit.live/api/v1/realtime/web',
-            auth=(NIMBLE_API_KEY, ''),
+            headers={
+                'Authorization': 'Basic ' + NIMBLE_API_KEY,
+                'Content-Type': 'application/json'
+            },
             json={
                 'url': url,
                 'render': True,
@@ -74,6 +77,7 @@ def scrape_url(url):
     except Exception as e:
         print('Error scraping ' + url + ': ' + str(e))
         return ''
+
 
 
 rows = []
