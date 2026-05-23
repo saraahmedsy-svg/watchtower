@@ -40,5 +40,44 @@ companies = {
     'Intercom': {
         'pricing': 'https://www.intercom.com/pricing',
         'reviews': 'https://www.g2.com/products/intercom/reviews',
-        'activity': 'ht
+        'activity': 'https://www.intercom.com/careers',
+        'case_study': 'https://www.intercom.com/customers'
+    },
+    'Monday': {
+        'pricing': 'https://monday.com/pricing',
+        'reviews': 'https://www.g2.com/products/monday-com/reviews',
+        'activity': 'https://monday.com/careers',
+        'case_study': 'https://monday.com/customers'
+    }
+}
+
+def scrape_url(url):
+    try:
+        response = requests.post(
+            'https://api.webit.live/api/v1/realtime/web',
+            headers={
+                'Authorization': 'Basic ' + NIMBLE_API_KEY,
+                'Content-Type': 'application/json'
+            },
+            json={
+                'url': url,
+                'render': True,
+                'country': 'US'
+            },
+            timeout=30
+        )
+        if response.status_code == 200:
+            return response.json().get('html_content', '')
+        return ''
+    except Exception as e:
+        print('Error scraping ' + url + ': ' + str(e))
+        return ''
+
+rows = []
+
+for company, urls in companies.items():
+    print('Scraping ' + company)
+    for signal_type, url in urls.items():
+        content = scrape_url(url)
+        if c
 
