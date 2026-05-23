@@ -1,5 +1,6 @@
 import os
 import datetime
+import base64
 import requests
 import clickhouse_connect
 
@@ -51,13 +52,13 @@ companies = {
     }
 }
 
-
 def scrape_url(url):
     try:
+        credentials = base64.b64encode((NIMBLE_API_KEY + ':').encode()).decode()
         response = requests.post(
             'https://api.webit.live/api/v1/realtime/web',
             headers={
-                'Authorization': 'Basic ' + NIMBLE_API_KEY,
+                'Authorization': 'Basic ' + credentials,
                 'Content-Type': 'application/json'
             },
             json={
@@ -77,8 +78,6 @@ def scrape_url(url):
     except Exception as e:
         print('Error scraping ' + url + ': ' + str(e))
         return ''
-
-
 
 rows = []
 
@@ -116,5 +115,6 @@ client.insert(
 )
 
 print('Done. Inserted ' + str(len(rows)) + ' rows into ClickHouse.')
+
 
 
