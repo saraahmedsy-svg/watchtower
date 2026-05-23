@@ -10,7 +10,7 @@ client = clickhouse_connect.get_client(
     secure=True
 )
 
-scraped_at = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+scraped_at = datetime.datetime.utcnow()
 
 companies = ['HubSpot', 'Salesforce', 'Notion', 'Intercom', 'Monday.com']
 
