@@ -51,27 +51,30 @@ companies = {
     }
 }
 
+
 def scrape_url(url):
     try:
         response = requests.post(
             'https://api.webit.live/api/v1/realtime/web',
-            headers={
-                'Authorization': 'Basic ' + NIMBLE_API_KEY,
-                'Content-Type': 'application/json'
-            },
+            auth=(NIMBLE_API_KEY, ''),
             json={
                 'url': url,
                 'render': True,
-                'country': 'US'
+                'country': 'US',
+                'locale': 'en'
             },
             timeout=30
         )
+        print('Status: ' + str(response.status_code))
+        print('Response: ' + response.text[:200])
         if response.status_code == 200:
-            return response.json().get('html_content', '')
+            data = response.json()
+            return data.get('html_content', data.get('text', ''))
         return ''
     except Exception as e:
         print('Error scraping ' + url + ': ' + str(e))
         return ''
+
 
 rows = []
 
