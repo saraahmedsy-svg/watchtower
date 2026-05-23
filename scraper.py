@@ -79,5 +79,35 @@ for company, urls in companies.items():
     print('Scraping ' + company)
     for signal_type, url in urls.items():
         content = scrape_url(url)
-        if c
+        if content:
+            summary = 'Scraped ' + url + '. Content length: ' + str(len(content)) + ' chars.'
+        else:
+            summary = 'No content returned for ' + url
+        rows.append([
+            company,
+            signal_type,
+            'web_scrape',
+            company + ' ' + signal_type + ' update',
+            summary,
+            scraped_at,
+            scraped_at
+        ])
+        print('  ' + signal_type + ': ' + str(len(content)) + ' chars')
+
+client.insert(
+    'competitor_signals',
+    rows,
+    column_names=[
+        'competitor_name',
+        'signal_type',
+        'activity_type',
+        'title',
+        'summary',
+        'published_at',
+        'scraped_at'
+    ]
+)
+
+print('Done. Inserted ' + str(len(rows)) + ' rows into ClickHouse.')
+
 
